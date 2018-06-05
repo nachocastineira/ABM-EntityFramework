@@ -1,0 +1,20 @@
+﻿@model EmpleadoABM.Entidades.Empleado
+
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Crear</h2>
+
+@using (Html.BeginForm("Crear", "Empleados", FormMethod.Post))
+{
+    @Html.LabelFor(@model => model.Nombre, "Nombre");
+    @Html.TextBoxFor(model => model.Nombre);
+    <br />
+
+    @Html.LabelFor(@model => model.Apellido, "Apellido");
+    @Html.TextBoxFor(model => model.Apellido);
+    <br />
+
+    <button type="submit" class="btn btn-success">Crear</button>
+}
